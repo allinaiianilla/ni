@@ -1,0 +1,9 @@
+{
+    "models": {
+        "meta/llama-3.1-8b-instruct": {
+            "base_url": "https://integrate.api.nvidia.com/v1",
+            "model_name": "meta/llama-3.1-8b-instruct",
+            "api_key": "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"
+        }
+    }
+}
