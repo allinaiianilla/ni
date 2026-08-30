@@ -1,8 +1,9 @@
-from rich.console import Console
-from rich.markdown import Markdown
+# from rich.console import Console
+# from rich.markdown import Markdown
 
 import os
 import json
+from openai import OpenAI
 from openai import OpenAI
 from datetime import datetime
 from prompt_toolkit import prompt
@@ -151,7 +152,7 @@ def get_response(client,model_data,messages):
 
 def aichat():
     start_time = datetime.now()
-    messages_filename = start_time.strftime("chat_%Y%m%d_%H%M%S.txt")
+    messages_filename = start_time.strftime("chat_%Y%m%d_%H%M%S.md")
     print("Welcome use aichat!")
 
     while True:
@@ -181,7 +182,7 @@ def aichat():
         if question_str.strip():
             question = {"role":"user","content":question_str}
             messages.append(question)
-            write_message(messages_filename, "user:", question_str)
+            write_message(messages_filename, "\n> user:", question_str)
         else:
             print("用户消息不能为空")
             continue
@@ -190,7 +191,7 @@ def aichat():
         if response_str:
             response = {"role":"assistant","content":response_str}
             messages.append(response)
-            write_message(messages_filename, "AI:", response_str)
+            write_message(messages_filename, "\n> ai:", response_str)
 
 
 
