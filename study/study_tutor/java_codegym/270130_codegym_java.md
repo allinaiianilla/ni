@@ -398,5 +398,14 @@ System.out.println( ! (1 == 1) ); // false
 
 #### Java 中的三元运算符：简洁条件与注意事项
 
+Condition ? Expression1 : Expression2;
 
+```java
+int score = 65;
+String result = score > 80 ? "优秀" : "一般";
+System.out.println(result);
+```
+
+> 是否使用三元运算符的经验: 逻辑能写在一行就用,否则就不用
+> 上面是开玩笑的, 大脑精力有限, 怎么简单就怎么来
 
