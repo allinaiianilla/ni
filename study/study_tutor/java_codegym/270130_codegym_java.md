@@ -39,7 +39,9 @@
 void main() 
     {
         // 方法中的命令
+        // 输出短语 "做程序员很酷！😎"
         System.out.println("大家好！");
         System.out.println("今天我们来学习如何用Java 编程！");
+        System.out.println("做程序员很酷！😎");
     }
 ```
