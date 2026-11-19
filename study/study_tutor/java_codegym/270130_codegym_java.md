@@ -11,7 +11,9 @@
 
 ## 基础知识
 
-### 命令与第一个java程序
+### 级别一 命令与第一个Java程序
+
+#### 命令与第一个java程序
 
 1. 理解程序
 
@@ -33,6 +35,9 @@
 
 2. java程序规则
 
+> 把第一个要执行的命令放到mian方法中
+> main方法中放第一个要执行的命令
+
 * main() 方法, java程序会找到main方法,然后从main方法开始依次执行方法
 
 ```java
@@ -45,3 +50,155 @@ void main()
         System.out.println("做程序员很酷！😎");
     }
 ```
+
+
+#### java中的屏幕输出: System.out.println 与 System.out.print
+
+> 任何java程序都由一条条命令组成.
+> 每条命令的末尾都要加上分号
+
+```java
+public class TestPrint {
+    public static void main(String[] args){
+        System.out.println("会换行");
+        System.out.println("会换行");
+        System.out.print("不会换行");
+        System.out.print("不会换行");
+
+    }
+}
+```
+
+#### 认识变量
+
+1. 变量与盒子
+
+变量 是一种用于存储数据的特殊的容器.
+
+变量的三个属性
+* 类型
+* 名称
+* 值
+
+2. 创建变量
+
+`type name;`
+
+示例:
+* int a; // 声明一个整数类型的变量,变量名是a
+* String s;
+* double c;
+
+3. 赋值
+
+把值放入变量 -- 赋值
+
+`name = value;`
+
+示例:
+* a = 1;
+* s = "njh";
+* a = a + 1;
+
+4. 变量名
+
+* 英文
+* 下划线
+* 数字
+
+```java
+public class TestBianliang {
+    public static void main(String[] args) {
+        int a = 10; // 声明一个整型变量 a，并赋值为 10
+        int b = 20; // 声明一个整型变量 b，并赋值为 20
+        int c = a + b; // 声明一个整型变量 c，并赋值为 a 和 b 的和
+        System.out.println("a + b = " + c);
+    }
+}
+```
+
+
+#### 变量类型
+
+1. 变量声明
+
+`类型 名称;`
+
+* int 整数
+* String 字符串
+
+2. int类型
+
+* 类型: 整数
+* 操作: 可以进行算术运算; +-*/ 加减乘除
+
+3. String类型
+
+* 类型: 用于存储文本字符串
+* 规则: 文本两侧加上双引号
+* 操作
+    1. 字符串拼接 `String s1 = "a" + "b"` // "ab"
+   
+```java
+public class TestBianliangCaozuo {
+    public static void main(String[] args) {
+        int a = 10; // 声明一个整型变量 a，并赋值为 10
+        int b = 20; // 声明一个整型变量 b，并赋值为 20
+        int c = a + b; // 声明一个整型变量 c，并赋值为 a 和 b 的和
+        System.out.println("a + b = " + c);
+        String str1 = "Hello"; // 声明一个字符串变量 str1，并赋值为 "Hello"
+        String str2 = "World"; // 声明一个字符串变量 str2，并赋值为 "World"
+        String str3 = str1 + " " + str2; // 字符串拼接
+        System.out.println(str3);
+    }
+}
+```
+
+
+#### 编译器与注释
+
+##### 编译
+> 命令写好了, 如何运行呢?
+1. 新建文本文件,后缀.java,编写要执行的命令
+2. 使用javac编译命令,将文本文件编译生成一个字节码文件
+3. 使用java命令,调用java虚拟机执行字节码文件
+
+##### 注释
+> 对代码的解释,不会被当成命令执行
+`int a = 5; // 声明一个整数类型变量a, 并给a赋值5`
+```java
+/*
+    多行注释 第一行
+    多行注释 第二行
+*/
+```
+
+### 级别二 整数：int 类型，int 类型的运算
+
+#### 整数：int 类型，int 类型的运算
+
+> int Integer的缩写,英文整数
+> int 类型的大小,占4个字节(每个字节8比特,总计32位比特), 整数范围大约是 -20亿 到 +20亿
+
+
+```java
+public class TestInt {
+    public static void main(String[] args) {
+        int a = 10; // 声明一个整型变量 a，并赋值为 10
+        int b = 20; // 声明一个整型变量 b，并赋值为 20
+        int c = a + b; // 声明一个整型变量 c，并赋值为 a 和 b 的和
+        System.out.println("a + b = " + c);
+        int d = a * b; // 声明一个整型变量 d，并赋值为 a 和 b 的积
+        System.out.println("a * b = " + d);
+        int e = b - a; // 声明一个整型变量 e，并赋值为 b 和 a 的差
+        System.out.println("b - a = " + e);
+        int f = b / a; // 声明一个整型变量 f，并赋值为 b 和 a 的商
+        System.out.println("b / a = " + f);
+        int g = b % a; // 声明一个整型变量 g，并赋值为 b 和 a 的余数
+        System.out.println("b % a = " + g);
+    }
+}
+```
+
+#### 字符串与文本：String 类型，字符串操作
+
