@@ -1,3 +1,0 @@
-sudo mkdir -p /lib/systemd/system-sleep
-sudo cp restart-wifi /lib/systemd/system-sleep
-sudo chomd +x /lib/systemd/system-sleep/restart-wifi
