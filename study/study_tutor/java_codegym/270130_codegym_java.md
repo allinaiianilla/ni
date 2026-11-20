@@ -409,3 +409,96 @@ System.out.println(result);
 > 是否使用三元运算符的经验: 逻辑能写在一行就用,否则就不用
 > 上面是开玩笑的, 大脑精力有限, 怎么简单就怎么来
 
+
+### 级别四 while循环:入门与使用细节
+
+> 存在很多任务或操作是需要重复多次的, 就要使用到循环
+
+#### while循环:入门与使用细节
+
+while循环的原理: 判断条件语句,条件成立,执行代码块.然后下一轮循环,直到条件不成立,循环结束
+
+```java
+public class TestWhile {
+    public static void main(String[] args){
+        // 打印一百次你好 
+        int i = 1;
+        while (i <= 100){
+            String message = "第" + i + "次: 你好";
+            System.out.println(message);
+            i = i + 1;
+        }
+    }
+}
+```
+
+#### for循环:入门与使用细节
+
+> for循环的原理:提前设定好循环规则,根据循环规则进行循环
+
+```java
+for (初始化; 条件; 更新)
+{
+    // 循环体
+}
+```
+
+```java
+public class TestFor {
+    public static void main(String[] args) {
+        // 打印一百次你好 
+        for (int i = 1; i <= 100; i++) {
+            String message = "第" + i + "次: 你好";
+            System.out.println(message);
+        }
+    }
+}
+```
+
+```java
+public class Solution {
+    public static void main(String[] args) {
+        // 从 (1, 5) 开始，每轮同时移动两个对象
+        for (int x = 1, y = 5; x <= 5; x++, y--) {
+            System.out.println(x + " " + y);
+        }
+    }
+}
+```
+
+#### do-while循环: 入门与使用细节
+
+> do-while循环: 先执行一次循环体, 再开始普通的while循环
+
+语法格式:
+```java
+do
+{
+    // 循环体: 这段代码至少会执行一次
+}
+while (condition);
+```
+
+```java
+public class TestDoWhile {
+    public static void main(String[] args) {
+        int i = 1000; // 初始化计数器 i 为 1
+        do {
+            String message = "第" + i + "次: 你好"; // 构建输出消息
+            System.out.println(message); // 输出消息到控制台
+            i++; // 计数器自增
+        } while (i <= 100); // 当计数器小于等于 100 时继续循环
+    }
+}
+```
+
+
+#### 循环控制:break与continue语句
+
+当你需要中途退出循环 或 跳过本次循环后续指令的的时候使用 `break continue` 关键字
+
+* break 停止循环
+* continue 跳过本轮次循环
+
+
+### 级别五
