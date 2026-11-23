@@ -1,9 +1,0 @@
-Line one;
-Line two;
-line six;
-Line frur;
-var foo = "method(" + argument1 + "," + argument2 + ")";
-var foo = "method(" + argument1 + "," + argument2 + ")";
-var foo = "method("+argument1+","+argument2+")";
-var foo = "method(" + argument1 + "," + argument2 + ")";
-var foo = "method(" + argument1 + "," + argument2 + ")";
